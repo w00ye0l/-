@@ -3,7 +3,7 @@ from collections import deque
 
 def solution(bridge_length, weight, truck_weights):
     answer = 0
-    bridge = deque([0 for _ in range(bridge_length)])
+    bridge = deque([0] * bridge_length)
     now_status = sum(bridge)
     truck_weights = deque(truck_weights)
 
