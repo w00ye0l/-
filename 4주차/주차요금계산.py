@@ -41,6 +41,7 @@ def solution(fees, records):
                 (math.ceil((v[3] - fees[0]) / fees[2]) * fees[3])
 
     fee_dic = sorted(fee_dic.items(), key=lambda x: (x[0], x[1]))
+
     for f in fee_dic:
         answer.append(f[1])
 
