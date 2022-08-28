@@ -1,27 +1,25 @@
-N = int(input())
-
-
-def prime(a):  # 소수인지 판별하는 함수. 많은 소수들의 리스트를 만드는것이 아니므로 에라토스테네스의 체를 사용하지 않아도 된다.
+def prime(a):
     if a < 2:
         return False
-    # 소수인지 검사 할 때, 2부터 해당 수의 제곱근까지를 나눠보면 알 수 있다.
-    for i in range(2, int(a**0.5)+1):
+
+    for i in range(2, int(a ** 0.5) + 1):
         if a % i == 0:
             return False
+
     return True
 
 
-def dfs(n):
-    if len(str(n)) == N:  # 숫자가 입력받은 길이(N)가 되면 출력
-        print(n)
+def dfs(num):
+    if len(str(num)) == n:
+        print(num)
     else:
-        for i in range(10):
-            nn = n * 10 + i  # 입력받은 수의 뒷 자리에 i를 넣어준다
-            if prime(nn):  # 해당 수가 소수에 해당하는경우
-                dfs(nn)  # dfs실행
+        for i in [1, 3, 7, 9]:
+            new_num = num * 10 + i
+            if prime(new_num):
+                dfs(new_num)
 
 
-dfs(2)  # 1의자리 소수들 입력
-dfs(3)
-dfs(5)
-dfs(7)
+n = int(input())
+
+for i in [2, 3, 5, 7]:
+    dfs(i)
