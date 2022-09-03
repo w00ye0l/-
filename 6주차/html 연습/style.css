@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+.box-list {
+    margin: 50px auto;
+    width: 300px;
+    height: 200px;
+    background-color: brown;
+
+    display: flex;
+}
+
+.start {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.end {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.twoline-center {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.box {
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
